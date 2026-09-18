@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1;
+  font-size: 16px;
+}
+
+/* High contrast dark theme */
+.theme-high-contrast-dark {
+  --tw-bg-opacity: 1;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+.theme-high-contrast-dark * {
+  border-color: #FFFF00 !important;
+}
+.theme-high-contrast-dark button,
+.theme-high-contrast-dark a,
+.theme-high-contrast-dark [role="button"] {
+  outline: 2px solid #FFFF00 !important;
+  color: #FFFFFF !important;
+  background-color: #000000 !important;
+}
+.theme-high-contrast-dark button:focus,
+.theme-high-contrast-dark button:hover {
+  background-color: #FFFF00 !important;
+  color: #000000 !important;
+}
+
+/* High contrast light theme */
+.theme-high-contrast-light {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+.theme-high-contrast-light * {
+  border-color: #000080 !important;
+}
+.theme-high-contrast-light button,
+.theme-high-contrast-light a,
+.theme-high-contrast-light [role="button"] {
+  outline: 2px solid #000080 !important;
+  color: #000080 !important;
+  background-color: #FFFFFF !important;
+}
+.theme-high-contrast-light button:focus,
+.theme-high-contrast-light button:hover {
+  background-color: #000080 !important;
+  color: #FFFFFF !important;
+}
+
+/* Font scale classes */
+.font-scale-100 { font-size: 16px; }
+.font-scale-125 { font-size: 20px; }
+.font-scale-150 { font-size: 24px; }
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 3px solid #38BDF8 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.4) !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.reduced-motion *, .reduced-motion ::before, .reduced-motion ::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
